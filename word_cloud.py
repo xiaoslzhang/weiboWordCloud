@@ -100,7 +100,7 @@ if __name__ == '__main__':
     number = 100
     myword = MyWordCloud(number)
     # 遍历weibo文件夹，生成词云，并统计哪些文件夹没有json文件。'
-    path = './../weiboSpider/2019在左2020在右好友'
+    path = './../weiboRecommend/weiboSpider/2019在左2020在右好友'
     stop = "./stop_words.txt"
     user_id_list = './test.txt'
     id_list = './todo_id2.txt'
