@@ -85,10 +85,10 @@ class MyWordCloud:
 
         myword = wc.generate(word_str)  # 用 wl的词语 生成词云
         # 展示词云图
-        plt.figure(num=name+'的微博关键词')
-        plt.imshow(myword)
-        plt.axis("off")
-        plt.show()
+        # plt.figure(num=name+'的微博关键词')
+        # plt.imshow(myword)
+        # plt.axis("off")
+        # plt.show()
         wc.to_file(path_wordcloud)  # 把词云保存下当前目录（与此py文件目录相同）
 
 if __name__ == '__main__':
@@ -116,9 +116,9 @@ if __name__ == '__main__':
                 #print(corpus)
                 if os.path.exists(corpus):
                     logger.info(u"开始处理%s的微博" % name)
-                    seg = corpus[:-5] + '_seg2.json'
-                    word_freq = corpus[:-5] + '_freq2.json'
-                    path_jpg = corpus[:-5] + '_词云2.jpg'
+                    seg = corpus[:-5] + '_seg3.json'
+                    word_freq = corpus[:-5] + '_freq3.json'
+                    path_jpg = corpus[:-5] + '_词云3.jpg'
                     myword.word_seg(corpus, seg)
                     myword.word_count(seg, word_freq, stop)
                     myword.create_word_cloud(myword.word_str(word_freq), path_jpg, name)
